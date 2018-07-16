@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+<!doctype html>
+<html>
+  <head>
+  {% block head %}
+  {% endblock %}
+    <title>{% block title %} Title {% endblock %}</title>
+  </head>
+
+  <style>
+  {% block style %}
+    .container-fluid { 
+      width: 90%;
+    }
+  {% endblock %}
+  </style>
+
+  <body>
+  {% block pagecontent %}
+    <div class="container-fluid">
+      <form method="post">
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+          {{ hidden }}
+        {% endfor %}
+
+        {% for field in form.visible_fields %}
+          <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {% render_field form.first_name class="form-control" placeholder=form.first_name.label %}
+            {% for error in field.errors %}
+              <span class="help-block">{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">
+            <span class="glyphicon glyphicon-ok"></span> Save
+          </button>
+          <a href="{% url 'home' %}" class="btn btn-default">Cancel</a>
+        </div>
+      </form>
+    </div>
+  {% endblock %}
+  </body>
+
+</html>
