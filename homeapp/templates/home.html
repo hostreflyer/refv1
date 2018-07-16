@@ -1,163 +1,157 @@
 {% extends 'base.html' %}
-<!doctype html>
-<html>
-  <head>
-  {% block head %}
-  {% endblock %}
-    <title>{% block title %} Home {% endblock %}</title>
-  </head>
 
-  <style>
-  {% block style %}
-  {% endblock %}
-  </style>
 
-  <body>
-  {% block pagecontent %}
-    <!-- Banner -->
-    <div class="jumbotron text-center">
-      <h1>Home</h1>
-      <p>...</p>
-    </div>
+{% block head %}
+{% endblock %}
 
-    <!-- About Company -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-8">
-          <h2>About Us</h2>
-          <h4>Lorem ipsum..</h4>
-          <p>Lorem ipsum..</p>
-          <button class="btn btn-default btn-lg">Get in Touch</button>
-        </div>
-        <div class="col-sm-4">
-          <span style="font-size: 8em; color: Dodgerblue;">
-            <i class="fas fa-globe-africa"></i>
-          </span>
-        </div>
+{% block title %} Home {% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block body %}
+  <!-- Banner -->
+  <div class="jumbotron text-center">
+    <h1>Home</h1>
+    <p>...</p>
+  </div>
+
+  <!-- About Company -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>About Us</h2>
+        <h4>Lorem ipsum..</h4>
+        <p>Lorem ipsum..</p>
+        <button class="btn btn-default btn-lg">Get in Touch</button>
+      </div>
+      <div class="col-sm-4">
+        <span style="font-size: 8em; color: Dodgerblue;">
+          <i class="fas fa-globe-africa"></i>
+        </span>
       </div>
     </div>
+  </div>
 
-    <!-- Values -->
-    <div class="container-fluid bg-grey">
-      <div class="row">
-        <div class="col-sm-4">
-          <span style="font-size: 8em; color: Dodgerblue;">
-            <i class="fas fa-plane-arrival"></i>
-          </span>
-        </div>
-        <div class="col-sm-8">
-          <h2>Our Values</h2>
-          <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
-          <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
-        </div>
+  <!-- Values -->
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <span style="font-size: 8em; color: Dodgerblue;">
+          <i class="fas fa-plane-arrival"></i>
+        </span>
+      </div>
+      <div class="col-sm-8">
+        <h2>Our Values</h2>
+        <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+        <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
       </div>
     </div>
+  </div>
 
-    <!-- Services -->
-    <div class="container-fluid text-center">
-      <h2>SERVICES</h2>
-      <h4>What we offer</h4>
-      <br>
-      <div class="row">
-        <div class="col-sm-4">
-          <i class="fas fa-power-off fa-sm"></i>
-          <h4>POWER</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-4">
-          <i class="fas fa-money-bill-alt fa-sm"></i>
-          <h4>LOVE</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-4">
-          <i class="fas fa-heart fa-sm"></i>
-          <h4>JOB DONE</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
+  <!-- Services -->
+  <div class="container-fluid text-center">
+    <h2>SERVICES</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <i class="fas fa-power-off fa-sm"></i>
+        <h4>POWER</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
       </div>
-      <br><br>
-      <div class="row">
-        <div class="col-sm-4">
-          <i class="fas fa-leaf fa-sm"></i>
-          <h4>GREEN</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-4">
-          <i class="fas fa-certificate fa-sm"></i>
-          <h4>CERTIFIED</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-4">
-          <i class="fas fa-wrench fa-sm"></i>
-          <h4>HARD WORK</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
+      <div class="col-sm-4">
+        <i class="fas fa-money-bill-alt fa-sm"></i>
+        <h4>LOVE</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <i class="fas fa-heart fa-sm"></i>
+        <h4>JOB DONE</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
       </div>
     </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <i class="fas fa-leaf fa-sm"></i>
+        <h4>GREEN</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <i class="fas fa-certificate fa-sm"></i>
+        <h4>CERTIFIED</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <i class="fas fa-wrench fa-sm"></i>
+        <h4>HARD WORK</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Carousel -->
-    <div class="container-fluid text-center bg-blue">
-      <h2>Regulatory framework</h2>
-      <div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Carousel -->
+  <div class="container-fluid text-center bg-blue">
+    <h2>Regulatory framework</h2>
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
 
-        <!-- Items -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">            
-            <h4>"What is EU Regulation"<br><span style="font-style:normal;">Eu Regulation provides a clear</span></h4>
+      <!-- Items -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">            
+          <h4>"What is EU Regulation"<br><span style="font-style:normal;">Eu Regulation provides a clear</span></h4>
+        </div>
+        <div class="carousel-item">
+          <h4>"Compensation"<br><span style="font-style:normal;">can be given</span></h4>
+        </div>
+        <div class="carousel-item">
+           <h4>"Time limitation?"<br><span style="font-style:normal;">between 1 to 10 years</span></h4>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact form -->
+  <div class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><i class="fas fa-map-marker-alt fa-sm"></i> Berlin, DE</p>
+        <p><i class="fas fa-phone fa-sm"></i> +49 (030)000 000</p>
+        <p><i class="fas fa-envelope fa-sm"></i> myemail@reflyer.com</p>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
           </div>
-          <div class="carousel-item">
-            <h4>"Compensation"<br><span style="font-style:normal;">can be given</span></h4>
-          </div>
-          <div class="carousel-item">
-             <h4>"Time limitation?"<br><span style="font-style:normal;">between 1 to 10 years</span></h4>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
           </div>
         </div>
-
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Contact form -->
-    <div class="container-fluid bg-grey">
-      <h2 class="text-center">CONTACT</h2>
-      <div class="row">
-        <div class="col-sm-5">
-          <p>Contact us and we'll get back to you within 24 hours.</p>
-          <p><i class="fas fa-map-marker-alt fa-sm"></i> Berlin, DE</p>
-          <p><i class="fas fa-phone fa-sm"></i> +49 (030)000 000</p>
-          <p><i class="fas fa-envelope fa-sm"></i> myemail@reflyer.com</p>
-        </div>
-        <div class="col-sm-7">
-          <div class="row">
-            <div class="col-sm-6 form-group">
-              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-            </div>
-            <div class="col-sm-6 form-group">
-              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-            </div>
-          </div>
-          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-          <div class="row">
-            <div class="col-sm-12 form-group">
-              <button class="btn btn-default pull-right" type="submit">Send</button>
-            </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
           </div>
         </div>
       </div>
     </div>
-  {% endblock %}
-  </body>
-</html>
+  </div>
+{% endblock %}

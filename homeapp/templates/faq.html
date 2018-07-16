@@ -1,24 +1,15 @@
 {% extends 'base.html' %}
-<!doctype html>
-<html>
-  <head>
-  {% block head %}
-  {% endblock %}
-    <title>{% block title %} FAQ {% endblock %}</title>
-  </head>
 
-  <style>
-  {% block style %}
-  {% endblock %}
-  </style>
+{% block head %}
+{% endblock %}
+{% block title %} FAQ {% endblock %}
 
-  <body>
-  {% block pagecontent %}
-    <div class="jumbotron text-center">
-      <h1>This is the FAQ Page</h1>
-      <p>...</p>
-    </div>
-  {% endblock %}
-  </body>
-
-</html>
+{% block style %}
+{% endblock %}
+  
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>This is the FAQ Page</h1>
+    <p>...</p>
+  </div>
+{% endblock %}

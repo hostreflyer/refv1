@@ -1,31 +1,23 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
-<!doctype html>
-<html>
-  <head>
-  {% block head %}
-  {% endblock %}
-    <title>{% block title %} Title {% endblock %}</title>
-  </head>
 
-  <style>
-  {% block style %}
-    .container-fluid { 
-      width: 50%;
-    }
-  {% endblock %}
-  </style>
+{% block head %}
+{% endblock %}
 
-  <body>
-  {% block pagecontent %}
-    <div class="container-fluid">
-      <form method="post" novalidate>
-        {% csrf_token %}
-        {% include 'includes/bs4form.html' with form=form %}
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  {% endblock %}
-  </body>
+{% block title %} Title {% endblock %}
 
-</html>
+{% block style %}
+  .container-fluid {
+    width: 50%;
+  }
+{% endblock %}
+
+{% block body %}
+  <div class="container-fluid">
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {% include 'includes/bs4form.html' with form=form %}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+{% endblock %}
