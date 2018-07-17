@@ -19,6 +19,17 @@
 
   <!-- Check Form -->
   <div class="container-fluid">
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {% include 'includes/bs4form.html' with form=form %}
+      <button type="submit" class="btn btn-primary">Check</button>
+    </form>
+  </div>
+
+  <!-- Test -->
+
+  <!-- Template -->
+<!--   <div class="container-fluid">
     <div class="form-group">
       <label for="sel1">Flight Segments</label>
       <select class="form-control" id="sel1">
@@ -52,5 +63,5 @@
       </div>
       <button type="submit" class="btn btn-primary mb-2">Submit</button>
     </form>
-  </div>
+  </div> -->
 {% endblock %}

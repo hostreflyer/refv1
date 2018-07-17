@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 
@@ -12,26 +12,20 @@ class CheckPageView(TemplateView):
 class FAQPageView(TemplateView):
     template_name = "faq.html"
 
-# class TestPageView(TemplateView):
-#     template_name = "test.html"
-
+class SuccessPageView(TemplateView):
+    template_name = "success.html"
 
 from .forms import CheckForm
-def test(request):
+def checkpageview(request):
     if request.method == 'POST':
         form = CheckForm(request.POST)
         if form.is_valid():
-            pass  # does nothing, just trigger the validation
+            check = form.save()
+            return redirect('success')
     else:
         form = CheckForm()
-    return render(request, 'test.html', {'form': form})
+    return render(request, 'check.html', {'form': form})
 
-from .forms import PersonForm
-def test2(request):
-    if request.method == 'POST':
-        form = PersonForm(request.POST)
-        if form.is_valid():
-            pass  # does nothing, just trigger the validation
-    else:
-        form = PersonForm()
-    return render(request, 'test2.html', {'form': form})
+
+def test(request):    
+    return render(request, 'test.html')
